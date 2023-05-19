@@ -9,6 +9,10 @@ import Ticket from "../../components/Ticket/";
 
 import { i18n } from "../../translate/i18n";
 
+import Hidden from "@material-ui/core/Hidden";
+
+import logo from "../../assets/logo1.png";
+
 const useStyles = makeStyles(theme => ({
 	chatContainer: {
 		flex: 1,
@@ -62,9 +66,23 @@ const TicketsCustom = () => {
 								<Ticket />
 							</>
 						) : (
-							<Paper square variant="outlined" className={classes.welcomeMsg}>
+
+<Hidden only={["sm", "xs"]}>
+                <Paper className={classes.welcomeMsg}>
+                  {/* <Paper square variant="outlined" className={classes.welcomeMsg}> */}
+                  <span>
+                    <center>
+                      <img src={logo} width="50%" alt=""/>
+                    </center>
+                    {i18n.t("chat.noTicketMessage")}
+                    </span>
+                </Paper>
+              </Hidden>
+
+						/*	<Paper square variant="outlined" className={classes.welcomeMsg}>
 								<span>{i18n.t("chat.noTicketMessage")}</span>
 							</Paper>
+							*/
 						)}
 					</Grid>
 				</Grid>
