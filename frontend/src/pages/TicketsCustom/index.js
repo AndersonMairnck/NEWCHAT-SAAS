@@ -11,7 +11,7 @@ import { i18n } from "../../translate/i18n";
 
 import Hidden from "@material-ui/core/Hidden";
 
-import logo from "../../assets/logo1.png";
+import logo from "../../assets/logoempresa.png";
 
 const useStyles = makeStyles(theme => ({
 	chatContainer: {
